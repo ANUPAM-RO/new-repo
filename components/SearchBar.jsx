@@ -45,7 +45,7 @@ const SearchBar = ({ data }) => {
               ))}
         </div>
       ) : (
-        <p className="flex justify-center items-center">
+        <p className="flex justify-center items-center h-96">
           <img src="loading.png" alt="" className="w-24 h-24" />
         </p>
       )}
