@@ -7,7 +7,7 @@ const Box = ({ imageUrl, breedsData }) => {
     <div className="flex justify-center">
       <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
         <img
-          className="rounded-t-lg h-56 w-full object-cover"
+          className="h-[40vh] object-cover w-full rounded-t-lg"
           src={imageUrl}
           alt="cat-image"
         />
@@ -52,9 +52,9 @@ const Box = ({ imageUrl, breedsData }) => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M1 5h12m0 0L9 1m4 4L9 9"
               />
             </svg>
