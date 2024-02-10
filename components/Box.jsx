@@ -1,18 +1,24 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
 
-const Box = ({imageUrl,  breedsData  }) => {
+const Box = ({ imageUrl, breedsData }) => {
   return (
     <div className="flex justify-center">
       <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-        <img className="rounded-t-lg h-48 w-full object-cover" src={imageUrl} alt="" />
+        <img
+          className="rounded-t-lg h-56 w-full object-cover"
+          src={imageUrl}
+          alt=""
+        />
         <div className="p-5">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            {breedsData?.name} {breedsData?.alt_names ? "or" : ""} {breedsData?.alt_names}
-          </h5>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-5">
+          <span className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            {breedsData?.name}
+          </span>
+          <span className="text-gray-600 pl-2">
+            {breedsData?.alt_names ? `(${breedsData?.alt_names})` : ""}{" "}
+          </span>
+          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-3">
             {breedsData?.description}
           </p>
           <div className="flex justify-between pb-2">
@@ -21,6 +27,14 @@ const Box = ({imageUrl,  breedsData  }) => {
             </p>
             <p className="text-teal-700 font-semibold">
               Intelligence: {breedsData?.intelligence}
+            </p>
+          </div>
+          <div className="flex justify-between pb-2">
+            <p className="text-violet-700 font-semibold">
+              Adaptability: {breedsData?.adaptability}
+            </p>
+            <p className="text-blue-700 font-semibold">
+              Child Friendly: {breedsData?.child_friendly}
             </p>
           </div>
 
