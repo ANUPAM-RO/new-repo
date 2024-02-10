@@ -9,7 +9,7 @@ const Box = ({ imageUrl, breedsData }) => {
         <img
           className="rounded-t-lg h-56 w-full object-cover"
           src={imageUrl}
-          alt=""
+          alt="cat-image"
         />
         <div className="p-5">
           <span className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
