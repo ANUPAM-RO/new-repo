@@ -1,5 +1,6 @@
 "use client";
-import useLoadData from "@/hooks/useLoadData";
+
+import useLoadData from "@/Hooks/useLoadData";
 import Box from "./Box";
 
 export default function Main() {
