@@ -7,7 +7,7 @@ const Box = ({ data }) => {
     <div className="flex justify-center">
       <div className="max-w-md bg-white border border-gray-200 rounded-lg shadow">
         <img
-          className="h-[44vh] object-cover w-full rounded-t-lg"
+          className="h-[44vh] w-full rounded-t-lg"
           src={data?.url}
           alt="cat-image"
         />
