@@ -6,16 +6,23 @@ export default function useLoadData() {
   const [catInfo, setCatInfo] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
+  async function fetchData() {
+    const data = await fetchApiData(
+      "https://api.thecatapi.com/v1/images/search?has_breeds=1"
+    );
+    setCatInfo(data);
+  }
+
   useEffect(() => {
-    async function fetchData() {
-      const data = await fetchApiData(
-        "https://api.thecatapi.com/v1/images/search?has_breeds=1"
-      );
-      setCatInfo(data);
-    }
     fetchData();
     setLoading(false);
   }, []);
 
-  return { catInfo, isLoading };
+  const handleRandom = () => {
+    setLoading(true);
+    fetchData();
+    setLoading(false);
+  };
+
+  return { catInfo, isLoading, handleRandom };
 }

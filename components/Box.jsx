@@ -5,9 +5,12 @@ import Link from "next/link";
 const Box = ({ data }) => {
   return (
     <div className="flex justify-center">
-      <div className="max-w-md bg-white border border-gray-200 rounded-lg shadow">
+      <a
+        href="#"
+        className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:h-2/4 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+      >
         <img
-          className="h-[44vh] w-full rounded-t-lg"
+          className="object-cover w-full rounded-t-lg h-full md:w-84 md:rounded-none md:rounded-s-lg"
           src={data?.url}
           alt="cat-image"
         />
@@ -16,7 +19,9 @@ const Box = ({ data }) => {
             {data?.breeds[0]?.name}
           </span>
           <span className="text-gray-600 pl-2">
-            {data?.breeds[0]?.alt_names ? `(${data?.breeds[0]?.alt_names})` : ""}{" "}
+            {data?.breeds[0]?.alt_names
+              ? `(${data?.breeds[0]?.alt_names})`
+              : ""}{" "}
           </span>
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-3">
             {data?.breeds[0]?.description}
@@ -59,7 +64,7 @@ const Box = ({ data }) => {
             </svg>
           </Link>
         </div>
-      </div>
+      </a>
     </div>
   );
 };
